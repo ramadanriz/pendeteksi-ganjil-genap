@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ganjir Genap</title>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/3840/3840653.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.0/dist/cdn.min.js"></script>
+  </head>
+  <body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container">
+                <span class="navbar-brand fw-semibold">Check Number</span>
+            </div>
+        </nav>
+    </header>
+    <main class="container mt-5">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-4">
+                    <div class="card">
+                        <div class="card-body" x-data="{ message: '' }">
+                            <h1 class="card-title mb-5" x-text="message % 2 == 0 ? 'Genap' : 'Ganjil'"></h1>
+                            <div class="mb-3">
+                                <label for="number" class="form-label">Masukkan angka</label>
+                                <input type="number" x-model.number="message" class="form-control" id="number" aria-describedby="number">
+                                <div id="number" class="form-text">Angka negatif hingga positif</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
